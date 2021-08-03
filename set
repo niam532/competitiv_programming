@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+  
+int main(){
+  set<int, greater<int> > a;
+  a.insert(NUMBER); //two of the same cannot be added
+  a.erase(NUMBER);
+  a.find(NUMBER); //returns position of wanted number
+  a.erase(a.begin(), a.find(NUMBER));
+  a.size();
+  a.empty();//bool
+  a.clear();
+  
+  a.swap(b);//sizes can differ
+}
