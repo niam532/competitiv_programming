@@ -5,11 +5,7 @@ using namespace std;
 int main(){
   map<int, int> a;
   a.insert(pair<int, int>(1, 40));
-  //where 1 is key which is unique and 40 is the element
   
-  
-  
-  //for printing:--------------------------------------
   map<int, int>::iterator itr;
   for (itr = a.begin(); itr != a.end(); ++itr) {
         cout << '\t' << itr->first                               //key
@@ -18,20 +14,15 @@ int main(){
     
     
     
-    //assigning to the second map----------------
-    map<int, int> b(a.begin(), a.end());
-    
-    
-    //---------------------removing-----------------
+    map<int, int> b(a.begin(), a.end()); //duplicate
     a.erase(KEY);  
     b.erase(b.begin(), b.find(KEY));
     
-    //OTHER
-    a.find(KEY); //position of key
-    a.count(KEY); //if key is present or no(bool)
-    a.size(); //size of element
-    a.empty(); //if a is empty(bool)
-    a.clear(); //clears
+    a.find(KEY); 
+    a.count(KEY); 
+    a.size();
+    a.empty(); //(bool)
+    a.clear(); 
     a.rbegin() = a.end();
     a.emplace(FIRST, SECOND);
 }
